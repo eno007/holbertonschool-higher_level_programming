@@ -5,13 +5,13 @@ def roman_to_int(roman_string):
     if roman_string is None and roman_string is not str:
         return 0
     length = len(roman_string)
-
-    for i in range(length):
-        if i is (length - 1):
-            sum_ += rom_dict[roman_string[i]]
-        else:
-            if rom_dict[roman_string[i]] >= rom_dict[roman_string[i + 1]]:
+    if length > 0:
+        for i in range(length):
+            if i is (length - 1):
                 sum_ += rom_dict[roman_string[i]]
             else:
-                sum_ -= rom_dict[roman_string[i]]
-    return (sum_)
+                if rom_dict[roman_string[i]] >= rom_dict[roman_string[i + 1]]:
+                    sum_ += rom_dict[roman_string[i]]
+                else:
+                    sum_ -= rom_dict[roman_string[i]]
+        return (sum_)
