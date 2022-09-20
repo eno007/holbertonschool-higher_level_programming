@@ -80,3 +80,8 @@ Test when input is negative infinite float:
         >>> add_integer(float('+inf'))
         Traceback (most recent call last):
         OverflowError: cannot convert float infinity to integer
+
+Test when input is float('NaN'):
+        >>> add_integer(float('NaN'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
