@@ -9,8 +9,8 @@ Using ``matrix_divided``
 
 Import function:
 	>>> matrix_divided(matrix, 3)
-	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
-	[[1, 2, 3], [4, 5, 6]]
+	Traceback (most recent call last):
+	NameError: name 'matrix' is not defined
 
 Test one of elements in matrix is negative intiger:
 	>>> matrix_divided([[-1, 2, 3], [4, 5, 6]], 3)
@@ -50,19 +50,17 @@ Test one element of matrix is float divider integer:
 
 Test two inputs are float:
         >>> matrix_divided([[7, 2, 3], [4, 5, 6.6]], 3.33)
-        [[2.33, 0.67, 1.0], [1.33, 1.67, 2.2]]
+	[[2.1, 0.6, 0.9], [1.2, 1.5, 1.98]]
 
 Test matrix or character not defined:
         >>> matrix_divided([[1, "c", 3], [4, 5, 6]], 3)
         Traceback (most recent call last):
         TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-Test matrix or character not defined:
+Test el in matrix:
         >>> matrix_divided([[1, float('+inf'), 3], [4, 5, 6]], 3)
-        Traceback (most recent call last):
-        OverflowError: cannot convert float infinity to integer
+        [[0.33, inf, 1.0], [1.33, 1.67, 2.0]]
 
-Test matrix or character not defined:
+Test el in matrix is NaN and divider infinite :
         >>> matrix_divided([[1, float('NaN'), 3], [4, 5, 6]], float('-inf'))
-        Traceback (most recent call last):
-        ValueError: cannot convert float NaN to integer
+        [[-0.0, nan, -0.0], [-0.0, -0.0, -0.0]]
