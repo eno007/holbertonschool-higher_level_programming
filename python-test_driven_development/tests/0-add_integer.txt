@@ -1,0 +1,82 @@
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+
+The ``0-add_integer`` module
+============================
+
+Using ``add_intiger``
+---------------------
+
+Import function:
+	>>> add_integer(1, 2)
+	3
+
+Test one of elements is negative intiger:
+	>>> add_integer(100, -2)
+	98
+
+Test two negative intiger:
+	>>> add_integer(-5, -6)
+	-11
+
+Test one element is 0  and other intiger:
+        >>> add_integer(100, 0)
+        100
+
+Test one intiger:
+        >>> add_integer(2)
+        100
+
+Test one intiger:
+        >>> add_integer(0)
+        98
+
+Test one intiger:
+        >>> add_integer(-2)
+        96
+
+Test one input is float:
+        >>> add_integer(2.12)
+        100
+
+Test two inputs are float:
+        >>> add_integer(5.25, 6.38)
+        11
+
+Test one negative float one positive float:
+        >>> add_integer(-2.67, 6.87)
+        4
+
+Test two negative floats:
+        >>> add_integer(-8.23, -9.33)
+        -17
+
+Test when three inputs intiger:
+        >>> add_integer(2, 5, 6)
+        Traceback (most recent call last):
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Test when input not intiger:
+        >>> add_integer(2, c)
+	Traceback (most recent call last):
+	NameError: name 'c' is not defined
+
+Test when input not intiger:
+        >>> add_integer("hello")
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+Test when input is string:
+        >>> add_integer(2, "Hello")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+Test when input is positive infinite float:
+        >>> add_integer(float('+inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+Test when input is negative infinite float:
+        >>> add_integer(float('+inf'))
+        Traceback (most recent call last):
+        OverflowError: cannot convert float infinity to integer
