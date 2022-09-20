@@ -1,0 +1,88 @@
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+The ``2-matrix_divided`` module
+============================
+
+Using ``matrix_divided``
+---------------------
+
+Import function:
+	>>> matrix_divided(matrix, 3)
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+	[[1, 2, 3], [4, 5, 6]]
+
+Test one of elements in matrix is negative intiger:
+	>>> matrix_divided([[-1, 2, 3], [4, 5, 6]], 3)
+	[[-0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+Test at least one el of matrix is negative and divider negative :
+	>>> matrix_divided([[-1, 2, 3], [4, 5, 6]], -3)
+	[[0.33, -0.67, -1.0], [-1.33, -1.67, -2.0]]
+
+Test one element of matrix is 0 and divider is intiger:
+        >>> matrix_divided([[-1, 2, 3], [0, 5, 6]], 3)
+        [[-0.33, 0.67, 1.0], [0.0, 1.67, 2.0]]
+
+Test divider is 0:
+        >>> matrix_divided([[-1, 2, 3], [0, 5, 6]], 0)
+        Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+Test matrix is 0 and divider is 0:
+        >>> matrix_divided([[0, 0, 0], [0, 0, 0]], 0)
+        Traceback (most recent call last):
+	ZeroDivisionError: division by zero
+
+Test division not defined:
+        >>> matrix_divided([[7, 2, 3], [4, 5, 6]], c)
+        Traceback (most recent call last):
+	NameError: name 'c' is not defined
+
+Test division not integer:
+        >>> matrix_divided([[7, 2, 3], [4, 5, 6]], "c")
+        Traceback (most recent call last):
+        TypeError: div must be a number
+
+Test one element of matrix is float divider integer:
+        >>> matrix_divided([[7, 2, 3], [4, 5, 6.6]], 3)
+        [[2.33, 0.67, 1.0], [1.33, 1.67, 2.2]]
+
+Test two inputs are float:
+        >>> matrix_divided([[7, 2, 3], [4, 5, 6.6]], 3.33)
+        [[2.33, 0.67, 1.0], [1.33, 1.67, 2.2]]
+
+Test when three inputs intiger:
+        >>> add_integer(2, 5, 6)
+        Traceback (most recent call last):
+	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Test when input not intiger:
+        >>> add_integer(2, c)
+	Traceback (most recent call last):
+	NameError: name 'c' is not defined
+
+Test when input not intiger:
+        >>> add_integer("hello")
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+Test when input is string:
+        >>> add_integer(2, "Hello")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+Test when input is positive infinite float:
+        >>> add_integer(float('+inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+Test when input is negative infinite float:
+        >>> add_integer(float('-inf'))
+        Traceback (most recent call last):
+        OverflowError: cannot convert float infinity to integer
+
+Test when input is float('NaN'):
+        >>> add_integer(float('NaN'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
