@@ -77,7 +77,7 @@ Test when input is positive infinite float:
 	OverflowError: cannot convert float infinity to integer
 
 Test when input is negative infinite float:
-        >>> add_integer(float('+inf'))
+        >>> add_integer(float('-inf'))
         Traceback (most recent call last):
         OverflowError: cannot convert float infinity to integer
 
