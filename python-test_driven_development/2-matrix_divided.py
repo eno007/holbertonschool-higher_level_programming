@@ -12,7 +12,8 @@ def matrix_divided(matrix, div):
             if type(el) is float:
                 el = int(el)
             elif type(el) is not int:
-                raise TypeError('matrix must be a matrix (list of lists) of integers/floats')
+                raise TypeError('matrix must be a matrix 
+                        (list of lists) of integers/floats')
     if type(div) is float:
         div = int(div)
     if type(div) is not int:
