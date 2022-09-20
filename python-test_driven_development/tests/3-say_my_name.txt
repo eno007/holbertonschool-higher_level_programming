@@ -1,0 +1,13 @@
+The ``3-say_my_name`` doctest
+=============================
+
+Using ``say_my_name``
+---------------------
+
+Import function from module:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test two normal strings:
+	>>> say_my_name("Donaldo", "Kumaraku")
+	My name is Donaldo Kumaraku
+
