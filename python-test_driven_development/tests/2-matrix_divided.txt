@@ -52,37 +52,17 @@ Test two inputs are float:
         >>> matrix_divided([[7, 2, 3], [4, 5, 6.6]], 3.33)
         [[2.33, 0.67, 1.0], [1.33, 1.67, 2.2]]
 
-Test when three inputs intiger:
-        >>> add_integer(2, 5, 6)
+Test matrix or character not defined:
+        >>> matrix_divided([[1, "c", 3], [4, 5, 6]], 3)
         Traceback (most recent call last):
-	TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+        TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-Test when input not intiger:
-        >>> add_integer(2, c)
-	Traceback (most recent call last):
-	NameError: name 'c' is not defined
-
-Test when input not intiger:
-        >>> add_integer("hello")
-        Traceback (most recent call last):
-        TypeError: a must be an integer
-
-Test when input is string:
-        >>> add_integer(2, "Hello")
-	Traceback (most recent call last):
-	TypeError: b must be an integer
-
-Test when input is positive infinite float:
-        >>> add_integer(float('+inf'))
-	Traceback (most recent call last):
-	OverflowError: cannot convert float infinity to integer
-
-Test when input is negative infinite float:
-        >>> add_integer(float('-inf'))
+Test matrix or character not defined:
+        >>> matrix_divided([[1, float('+inf'), 3], [4, 5, 6]], 3)
         Traceback (most recent call last):
         OverflowError: cannot convert float infinity to integer
 
-Test when input is float('NaN'):
-        >>> add_integer(float('NaN'))
-	Traceback (most recent call last):
-	ValueError: cannot convert float NaN to integer
+Test matrix or character not defined:
+        >>> matrix_divided([[1, float('NaN'), 3], [4, 5, 6]], float('-inf'))
+        Traceback (most recent call last):
+        ValueError: cannot convert float NaN to integer
