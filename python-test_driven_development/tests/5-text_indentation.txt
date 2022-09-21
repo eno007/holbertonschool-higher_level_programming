@@ -18,7 +18,7 @@ Test text= not string:
 
 Test text= string with blank line:
 	>>> text_indentation("")
-	>>>
+	
 
 Test missing one argument:
 	>>> text_indentation()
