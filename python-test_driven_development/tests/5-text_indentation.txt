@@ -11,6 +11,11 @@ Test text= string:
 	>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit.?:""")
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+	?
+
+	:
+
+
 Test text= not string:
 	>>> text_indentation(12)
 	Traceback (most recent call last):
