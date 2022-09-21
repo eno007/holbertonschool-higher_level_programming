@@ -17,7 +17,7 @@ Test firstname= string / lastname= not string:
         TypeError: last_name must be a string
 
 Test firstname= not string / lastname= string:
-	>>> say_my_name(12)
+	>>> say_my_name(12, "")
 	Traceback (most recent call last):
 	TypeError: first_name must be a string
 
