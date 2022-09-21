@@ -17,8 +17,10 @@ Test text= not string:
 	TypeError: text must be a string
 
 Test text= string with blank line:
-	>>> text_indentation("")
+	>>> text_indentation("hello ? holbie")
+	hello ?
 	<BLANKLINE>
+	holbie
 
 Test missing one argument:
 	>>> text_indentation()
