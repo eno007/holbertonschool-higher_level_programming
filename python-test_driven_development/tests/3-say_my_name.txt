@@ -12,7 +12,7 @@ Test two normal strings:
 	My name is Donaldo Kumaraku
 
 Test firstname= string / lastname= not string:
-        say_my_name("Donaldo", 12)
+        say_my_name("Donaldo")
         Traceback (most recent call last):
         TypeError: last_name must be a string
 
