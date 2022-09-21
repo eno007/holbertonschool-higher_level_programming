@@ -14,4 +14,17 @@ Test when is int:
 	####
 	####
 
+Test when is not int:
+	>>> print_square("a")
+	Traceback (most recent call last):
+	TypeError: size must be an integer
 
+Test when size < 0:
+	>>> print_square(-2)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+Test when size is empty:
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
