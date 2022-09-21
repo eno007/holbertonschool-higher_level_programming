@@ -8,13 +8,8 @@ Import function from module:
 	>>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Test text= string:
-	>>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit.?:""")
-	Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-	?
-
-	:
-
+	>>> text_indentation("hello, holbie")
+	hello, holbie
 
 Test text= not string:
 	>>> text_indentation(12)
