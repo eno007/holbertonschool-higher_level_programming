@@ -2,12 +2,13 @@
 """Function that will print a rectangle"""
 
 
-number_of_instances = 0
-"""Counts number of instances"""
-
-
 class Rectangle:
     """Rectangle class"""
+
+
+    number_of_instances = 0
+    """Counts number of instances"""
+
 
     def __init__(self, width=0, height=0):
         """Initialize data"""
