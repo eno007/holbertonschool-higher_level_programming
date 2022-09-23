@@ -5,9 +5,10 @@
 class Rectangle:
     """Rectangle class"""
 
+
     number_of_instances = 0
     """Counts number of instances"""
-    
+
 
     print_symbol = '#'
     """Used as symbol for string representation"""
@@ -15,8 +16,8 @@ class Rectangle:
 
     def __init__(self, width=0, height=0):
         """Initialize data"""
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -63,7 +64,7 @@ class Rectangle:
         if self.width > 0 and self.height > 0:
             for height in range(self.height):
                 for width in range(self.width):
-                    strin += str(self.print_symbol)
+                    string += str(self.print_symbol)
                 string += '\n'
         return (string[: -1])
 
