@@ -2,6 +2,10 @@
 """Function that will print a rectangle"""
 
 
+number_of_instances = 0
+"""Counts number of instances"""
+
+
 class Rectangle:
     """Rectangle class"""
 
