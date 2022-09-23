@@ -61,9 +61,9 @@ class Rectangle:
         """Return str with character '#'"""
         string = ''
         if self.width > 0 and self.height > 0:
-            for height in range(self.__height):
-                for width in range(self.__width):
-                    string += '#'
+            for height in range(self.height):
+                for width in range(self.width):
+                    strin += str(self.print_symbol)
                 string += '\n'
         return (string[: -1])
 
