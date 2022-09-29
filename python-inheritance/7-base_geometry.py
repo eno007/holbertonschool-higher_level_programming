@@ -7,6 +7,7 @@ class BaseGeometry:
     def area(self):
         """Public instance method"""
         raise Exception('area() is not implemented')
+
     def integer_validator(self, name, value):
         """Public instance method that checks value"""
         if type(value) is not int:
