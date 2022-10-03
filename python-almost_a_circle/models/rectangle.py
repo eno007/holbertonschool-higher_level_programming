@@ -92,9 +92,7 @@ class Rectangle(Base):
                 (self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args):
-        """Method that overrides __str__ method"""
-        1st arg: id
-        2nd arg: width
-        3rd arg: height
-        4th arg: x
-        5th arg: y
+        """Method that assigns an argument to each attribute"""
+        attributes = ["id", "width", "height", "x", "y"]
+        for idx in range(len(args)):
+            attributes[idx] = args[idx]
