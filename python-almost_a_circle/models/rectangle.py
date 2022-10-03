@@ -14,3 +14,23 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
+
+    @property
+    def width(self):
+        """Initializes Rectangle width"""
+        return(self.__width)
+
+    @property
+    def height(self):
+        """Initializes Rectangle height"""
+        return(self.__height)
+
+    @property
+    def x(self):
+         """Initializes Rectangle x"""
+         return(self.__x)
+
+    @property
+    def y(self):
+         """Initializes Rectangle y"""
+         return(self.__y)
