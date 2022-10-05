@@ -64,3 +64,22 @@ class Base():
                 for dict in list_dict:
                     return_dict.append(cls.create(**dict))
         return (return_dict)
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        list_dict = []
+        if list_objs:
+            for i in list_objs:
+                list_dict += [i.to_dictionary()]
+        with open(cls.__name__ + '.csv', 'w', encoding='utf-8') as f:
+            f.write(cls.to_cls_string(list_dict))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        return_dict = []
+        if os.path.exists(cls.__name__ + ".csv"):
+            with open(cls.__name__ + ".csv", 'r', encoding='utf-8') as f:
+                list_dict = cls.from_json_string(f.read())
+                for dict in list_dict:
+                    return_dict.append(cls.create(**dict))
+        return (return_dict)
