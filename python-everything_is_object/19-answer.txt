@@ -1,0 +1,4 @@
+def copy_list(l):
+new_list = []
+for el in list:
+new_list.append(el)
