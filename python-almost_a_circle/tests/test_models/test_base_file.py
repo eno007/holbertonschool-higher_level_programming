@@ -10,6 +10,10 @@ class TestBase(unittest.TestCase):
     def test_base(self):
         b = Base()
         self.assertEqual(b.id, 1)
+        b = Base()
+        self.assertEqual(b.id, )
+        b = Base(89)
+        self.assertEqual(b.id, 89)
 
 if __name__ == '__main__':
     unittest.main()
