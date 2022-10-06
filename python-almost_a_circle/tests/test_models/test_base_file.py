@@ -12,16 +12,20 @@ from models.square import Square
 class TestBase(unittest.TestCase):
     """Tests for Base class"""
     @classmethod
-    def setUpClass(cls):
-        """sets up class"""
-        Base._Base__nb_objects = 0
-        cls.b1 = Base()
-        self.assertEqual(b1.id)
-        cls.b2 = Base()
-        self.assertEqual(b2.id, 1)
-        cls.b3 = Base(89)
-        self.assertEqual(b3.id, 89)
+    def test_constantId(self):
+        """Test of Base for correctly initializing an id"""
+        b = Base(9)
+        self.assertEqual(b.id, 9)
 
+    def test_autoId(self):
+        """Test of Base for automatically assigning and incrementing an id"""
+        b = Base()
+        self.assertEqual(b.id, 1)
+
+    def test_string(self):
+        """Test of Base for case input is string"""
+        b = Base("string")
+        self.assertEqual(b.id, "string")
 
 if __name__ == '__main__':
     unittest.main()
