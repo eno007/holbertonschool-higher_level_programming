@@ -1,6 +1,3 @@
-#!/usr/bin/python3
-"""Unittest for Base class"""
-
 import unittest
 from models.base import Base
 
@@ -11,7 +8,7 @@ class TestBase(unittest.TestCase):
         b = Base()
         self.assertEqual(b.id, 1)
         b = Base()
-        self.assertEqual(b.id, )
+        self.assertEqual(b.id, 2)
         b = Base(89)
         self.assertEqual(b.id, 89)
 
