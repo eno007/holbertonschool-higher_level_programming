@@ -16,16 +16,11 @@ class TestBase(unittest.TestCase):
         """sets up class"""
         Base._Base__nb_objects = 0
         cls.b1 = Base()
+        self.assertEqual(b1.id)
         cls.b2 = Base()
+        self.assertEqual(b2.id, 1)
         cls.b3 = Base(89)
-
-    def test_id_create_1(self):
-        """tests for creation"""
-        self.assertTrue(self.b1)
-
-    def test_id_create_2(self):
-        """tests for creation"""
-        self.assertTrue(self.b3.id, 12)
+        self.assertEqual(b3.id, 89)
 
 
 if __name__ == '__main__':
