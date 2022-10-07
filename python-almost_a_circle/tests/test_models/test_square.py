@@ -14,14 +14,12 @@ class TestSquare(unittest.TestCase):
     def test_square_two(self):
         """test 2 args"""
         sq1 = Square(1, 2)
-        sq2 = Square(2, 3)
-        self.assertEqual(sq1.id, sq2.id - 1)
+        self.assertEqual(sq1.x, 2)
 
     def test_square_three(self):
         """test 3 args"""
         sq1 = Square(1, 2, 3)
-        sq2 = Square(1, 3, 4)
-        self.assertEqual(sq1.id, sq2.id - 1)
+        self.assertEqual(sq1.y, 3)
 
     def test_square_four(self):
         """test 4 args"""
